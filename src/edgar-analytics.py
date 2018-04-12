@@ -26,7 +26,7 @@ def edgar_analytics(args):
 	del big_data
 
 	#Read inactivity time:
-	delta_time = open(args.inactivity_time, "r").readlines()
+	delta_time = open(args.inactivity_period, "r").readlines()
 	delta_time = int(delta_time[0])
 	print('Reading Complete')
 
@@ -131,7 +131,7 @@ def main():
 	==========
 	data       : path to EDGAR weblog input data (log.csv or similar file)
 	
-	inactivity_time : path to file containing inactivity time value (inactivity_period.txt).
+	inactivity_period : path to file containing inactivity time value (inactivity_period.txt).
 	
 	output     : path to output file for data writing (sessionization.txt)
 	"""
@@ -140,7 +140,7 @@ def main():
 	descr = 'path to EDGAR weblog input data file (log.csv). Default: %(default)s'
 	parser.add_argument('--data', default='./input/log.csv',help=descr)
 	descr = 'path to inactivity period input data file (inactivity_period.txt). Default: %(default)s'
-	parser.add_argument('--inactivity_time', default='./input/inactivity_period.txt', help=descr)
+	parser.add_argument('--inactivity_period', default='./input/inactivity_period.txt', help=descr)
 	descr = 'path to output file'
 	parser.add_argument('--output', default='./output/sessionization.txt', help=descr)
 	args = parser.parse_args()
