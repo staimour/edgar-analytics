@@ -15,7 +15,7 @@ Thank you for your reviewing my entry! This README will guide the grader in succ
 ### Setup ###
 
 1. Program: `src/edgar-analytics.py`
-    * usage: python [path_to_program] --data [input_data_file_path] --inactivity_period [inactivity_period_data_file_path] --output [output_file_path]
+    * usage: python [path_to_program] --data [input_data_file_path] --inactivity_time [inactivity_period_data_file_path] --output [output_file_path]
         * path_to_program : path to edgar-analytics.py.
         * input_data_file_path : path to EDGAR weblog input file: `log.csv`. Default: `./input/log.csv`
         * inactivity_period_data_file_path: path to inactivity period file: `inactivity_period.txt`. Default: `./input/inactivity_period.txt`
