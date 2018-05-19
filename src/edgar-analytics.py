@@ -79,7 +79,7 @@ def edgar_analytics(args):
     		# data entries from 1 sec ago:
     		active_one_sec_ago = data_active[(time - data_active['time_in_seconds'] == delta_time - 1 + 1 )]
     		# data entries from 2 sec ago:
-    		active_two_sec_ago = data_active[(time - data_active['time_in_seconds'] == delta_time - 0 + 1 )]
+    		active_two_sec_ago = data_active[(time - data_active['time_in_seconds'] >= delta_time - 0 + 1 )]
     
     		# Find inactive ip's
     		notNow = active_two_sec_ago['ip'] != active_now['ip'].any()
